@@ -10,7 +10,8 @@
 > en la consola correr --> dart pub outdated --    mode=null-safety
 * Aplicar flutter fix
  >en la consola correr --> dart fix --dry-run para ver los cambios disponibles
- en la consola correr --> dart fix --apply para aplicar todos los cambios
+ 
+ >en la consola correr --> dart fix --apply para aplicar todos los cambios
 
 * Actualizar los paquetes a null safety
 * > dart pub upgrade --null-safety
@@ -41,19 +42,22 @@
 * Agragar la siguiente linea en el archivo android/app/src/main/AndroidManifest.xml
   >En todos los <activiti que contengan un <intent-filter
                                                           
-  > --- <activity
+  > <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
-            **android:exported="true" --->>> Linea nueva**
+            **android:exported="true" Linea nueva** />
 
-  > --- Si aun no tenias habilitado el embedding 2, deberas poner estas lineas debajo del activity
-   ---</activity>
+  > Si aun no tenias habilitado el embedding 2, deberas poner estas lineas debajo del activity
+ 
+  >  </activity>
+        </activity>
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
---Mofificar esta linea --> android:name="io.flutter.app.FlutterApplication" por esta android:name="${applicationName}"
--- Si sale algun error, seguir los pasos descritos en el **link 1**
+ 
+  > Mofificar esta linea --> android:name="io.flutter.app.FlutterApplication" por esta android:name="${applicationName}"
+  >Si sale algun error, seguir los pasos descritos en el **link 1**
 
 * Para crear la carpeta windows en el proyecto migrado de flutter 2.8.1  corren el comando **flutter create .** estando en la version 2.10.0
 
@@ -61,8 +65,9 @@
    sdk: '>=2.16.0 <3.0.0'
 * Agrega flutter_lints: ^1.0.0 en dev_dependencies para ver las correcciones de codigo mas recientres.
 * Nuevamente Aplicar flutter fix
- >en la consola correr --> dart fix --dry-run para ver los cambios disponibles
- -en la consola correr --> dart fix --apply para aplicar todos los cambios
+  >En la consola correr --> dart fix --dry-run para ver los cambios disponibles
+  
+  >En la consola correr --> dart fix --apply para aplicar todos los cambios
 
 ### Listo, puedes ejecutar tu proyecto.
 
