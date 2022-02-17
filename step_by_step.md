@@ -40,12 +40,14 @@
 * Correr el comando Futter Upgrade
 * Agragar la siguiente linea en el archivo android/app/src/main/AndroidManifest.xml
   >En todos los <activiti que contengan un <intent-filter
-  --- <activity
+                                                          
+  > --- <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             **android:exported="true" --->>> Linea nueva**
---Si aun no tenias habilitado el embedding 2, deberas poner estas lineas debajo del activity
+
+  > --- Si aun no tenias habilitado el embedding 2, deberas poner estas lineas debajo del activity
    ---</activity>
         <meta-data
             android:name="flutterEmbedding"
